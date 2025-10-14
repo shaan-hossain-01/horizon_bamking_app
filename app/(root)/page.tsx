@@ -1,10 +1,11 @@
 const Home = () => {
-    return (
-        <div>
-            <h1>Welcome to Horizon</h1>
-            <p>Your modern banking platform.</p>
-        </div>
-    );
-}
- 
+  return (
+    <section className="home">
+      <div className="home-content">
+        <header className="home-header">Welcome to Our Website</header>
+      </div>
+    </section>
+  );
+};
+
 export default Home;
