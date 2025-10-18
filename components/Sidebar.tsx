@@ -10,7 +10,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
   return (
     <section className="sidebar">
       <nav className="flex flex-col gap-4">
-        <Link href="/" className="mb-12 cursor-pointer items-center gap-2">
+        <Link href="/" className="mb-12 flex cursor-pointer items-center gap-2">
           <Image
             src="/icons/logo.svg"
             alt="Horizon"
@@ -18,6 +18,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             height={34}
             className="size-[24px] max-xl:size-12"
           />
+          <h1 className="sidebar-logo">Horizon</h1>
         </Link>
         {sidebarLinks.map((link) => {
           const isActive =
@@ -36,10 +37,15 @@ const Sidebar = ({ user }: SiderbarProps) => {
                   className={cn({ "brightness-[3] invert-0": isActive })}
                 />
               </div>
+              <p className={cn("sidebar-label", { "!text-white": isActive })}>
+                {link.label}
+              </p>
             </Link>
           );
         })}
+        USER
       </nav>
+      FOOTER
     </section>
   );
 };
